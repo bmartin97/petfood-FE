@@ -1,0 +1,26 @@
+.layout-header {
+  @extend %flex-row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  flex-wrap: wrap;
+}
+
+.header-list {
+  @extend %flex-row;
+  margin: 0;
+  padding: 0;
+
+  &-item {
+    list-style-type: none;
+
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+
+    a {
+      color: $primary-font;
+      text-decoration: none;
+    }
+  }
+}

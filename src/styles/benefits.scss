@@ -1,0 +1,27 @@
+.layout-benefits {
+  @extend %flex-row;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  .benefit {
+    @extend %flex-row;
+    @extend %card;
+    gap: 15px;
+    flex-basis: calc((1080px / 3) - 40px);
+    align-items: center;
+    flex-grow: 1;
+
+    .benefit-title,
+    .benefit-description {
+      margin: 8px 0;
+    }
+
+    .benefit-description {
+      @extend %paragraph;
+    }
+
+    .benefit-image img {
+      width: 100px;
+    }
+  }
+}

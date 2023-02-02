@@ -1,0 +1,78 @@
+.testimonals-bubble {
+  @extend %flex-row;
+  @extend %card;
+  gap: 20px;
+  min-height: 150px;
+
+  .testimonals-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  .testimonals-quote {
+    padding: 0 30px;
+    border-left: 1px solid $primary-font;
+
+    &-item {
+      @extend %paragraph;
+
+      &:not(.item-selected) {
+        display: none;
+      }
+    }
+  }
+}
+
+.testimonals-profile {
+  @extend %flex-row;
+  justify-content: center;
+  gap: 20px;
+  height: 150px;
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &-triangle {
+      visibility: hidden;
+      opacity: 0.8;
+
+      svg path {
+        fill: $blue;
+        stroke: $blue;
+      }
+    }
+
+    &-picture {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 80px;
+      height: 80px;
+      opacity: 0.4;
+      transition: opacity 200ms ease;
+
+      img {
+        width: 100%;
+      }
+
+      &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-item.item-selected {
+    .testimonals-profile-item-picture {
+      opacity: 1;
+    }
+
+    .testimonals-profile-item-triangle {
+      visibility: visible;
+    }
+  }
+}

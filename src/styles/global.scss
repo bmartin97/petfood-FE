@@ -1,0 +1,41 @@
+$primary-font: #eee;
+$blue: #50d3ff;
+$box-shadow: 0 0 11px 1px $blue;
+
+body {
+  margin: 0;
+  background-color: #1659b3;
+  color: $primary-font;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+%flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+%paragraph {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+%card {
+  padding: 30px 18px;
+  border-radius: 10px;
+  box-shadow: $box-shadow;
+}
+
+.layout-container {
+  width: 1080px;
+  max-width: 100%;
+  margin: auto;
+  padding: 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+}
